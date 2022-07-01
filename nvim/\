@@ -29,6 +29,3 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nmap <leader>% :source %<cr>
 nmap <leader>h :HopWord<cr>
 nmap <leader>w :w!<cr>
-
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-let g:user_emmet_leader_key=','

@@ -1,8 +1,19 @@
 local comment = require('Comment')
 local telescope = require('telescope')
+local treesitter = require('nvim-treesitter.configs')
+local null_ls = require('null-ls')
+local hop = require('hop')
 
 -- Comments
 comment.setup()
+
+-- Hop
+hop.setup()
+
+-- Null ls
+null_ls.setup({
+    sources = { },
+})
 
 -- Telescope
 telescope.setup {
@@ -107,4 +118,17 @@ lualine.setup({
 	},
 	tabline = {},
 	extensions = {},
+})
+
+-- Treesitter
+treesitter.setup({
+    ensure_installed = { "typescript", "javascript", "lua" },
+
+    sync_install = false,
+
+    highlight = {
+        enable = true,
+        disable = { "c" },
+        additional_vim_regex_highlighting = false,
+    },
 })
