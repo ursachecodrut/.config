@@ -6,5 +6,6 @@
     "typescriptreact",
     "json",
     "typescript.tsx"
-  ]
+  ],
+  "snippets.ultisnips.enable": false
 }

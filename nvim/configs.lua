@@ -3,6 +3,8 @@ local telescope = require('telescope')
 local treesitter = require('nvim-treesitter.configs')
 local null_ls = require('null-ls')
 local hop = require('hop')
+local bufferline = require('bufferline')
+local harpoon = require('harpoon')
 
 -- Comments
 comment.setup()
@@ -15,6 +17,24 @@ null_ls.setup({
     sources = { },
 })
 
+-- Bufferline
+require("bufferline").setup {
+  options = {
+    separator_style = {"", ""},
+    indicator_icon = "",
+    show_buffer_close_icons = false,
+    show_close_icon = false,
+    show_tab_indicators = false
+  }
+}
+
+-- Harpoon
+harpoon.setup({
+    global_settings = {
+        mark_branch = true
+    }
+})
+
 -- Telescope
 telescope.setup {
   defaults = {
@@ -22,6 +42,7 @@ telescope.setup {
     prompt_prefix = " ",
     prompt_position = "top",
     path_display = { "smart" },
+    file_ignore_patterns = { "node_modules" }
   },
   pickers = {
     git_files = {
@@ -44,6 +65,8 @@ telescope.setup {
 }
 
 telescope.load_extension('harpoon')
+--
+--
 vim.cmd[[command! -nargs=0 GitFiles :Telescope git_files ]]
 vim.cmd[[command! -nargs=0 Commands :Telescope commands ]]
 vim.cmd[[command! -nargs=0 GitStatus :Telescope git_status ]]

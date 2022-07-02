@@ -24,3 +24,5 @@ Plug 'junegunn/fzf.vim'
 Plug 'pantharshit00/coc-prisma', {'do': 'yarn install --frozen-lockfile'}
 Plug 'pantharshit00/vim-prisma'
 Plug 'phaazon/hop.nvim'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
