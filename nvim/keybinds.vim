@@ -26,10 +26,12 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-nmap <leader>% :source %<cr>
-nmap <leader>h :HopWord<cr>
-nmap <leader>w :w!<cr>
-nmap <leader>q :q<cr>
+nnoremap <leader>% :source %<cr>
+nnoremap <leader><cr> :so ~/.config/nvim/init.vim
+nnoremap <leader>h :HopWord<cr>
+nnoremap <leader>w :w!<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>x :silent !chmod +x %<CR>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:user_emmet_leader_key=','

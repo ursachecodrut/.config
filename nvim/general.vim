@@ -20,7 +20,6 @@ set lazyredraw
 "" Look and feel
 set noshowmode 
 set number
-set relativenumber
 set nowrap
 set splitright
 set splitbelow

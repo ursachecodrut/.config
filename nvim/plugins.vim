@@ -26,6 +26,5 @@ Plug 'pantharshit00/vim-prisma'
 Plug 'phaazon/hop.nvim'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
-Plug 'xiyaowong/nvim-transparent'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
