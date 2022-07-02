@@ -5,6 +5,7 @@ local null_ls = require('null-ls')
 local hop = require('hop')
 local bufferline = require('bufferline')
 local harpoon = require('harpoon')
+local transparent = require('transparent')
 
 -- Comments
 comment.setup()
